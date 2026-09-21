@@ -67,8 +67,10 @@ What happens to the image:
 
 - It is held in memory only for the duration of the request.
 - We do **not** store the photo — not in our database, not in file storage, not in logs.
-- We do not use your photos to train any model, and our agreement with Google for the
-  paid Gemini API does not permit Google to use them to improve its models.
+- We do not use your photos to train any model of ours.
+- Google handles the image as our processor under the
+  [Gemini API terms](https://ai.google.dev/gemini-api/terms) that apply to our account,
+  which govern how long Google may keep it and what Google may do with it.
 
 Alongside each scan we store two small records:
 
