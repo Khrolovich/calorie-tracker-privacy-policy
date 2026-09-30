@@ -69,6 +69,8 @@ What happens to the image:
 
 - It is held in memory only for the duration of the request.
 - We do **not** store the photo — not in our database, not in file storage, not in logs.
+  (A photo you attach to a support request is different: it is stored with that request,
+  see 3.6.)
 - We do not use your photos to train any model of ours.
 - Google handles the image as our processor under the
   [Gemini API terms](https://ai.google.dev/gemini-api/terms) that apply to our account,
@@ -112,18 +114,21 @@ calcaloo@proton.me and we will remove the reports associated with your installat
 
 ### 3.6 Support requests and reports about AI results (version 1.2)
 
-You can write to us from the app (Profile → Contact support), and every AI photo result has
-"Report a problem with this result". When you send either, we receive your message, your
+You can write to us from the app (Profile → Contact support). On Android, every AI photo
+result also has "Report a problem with this result"; the iOS app does not have this button
+yet. When you send either, we receive your message, your
 account user ID, the email address you give us (or your account's), the app version and
 build, your device's operating system and version, the app language, whether you have
 Premium, the last error code the app recorded, and — only if you tick the box — the photo.
 A report about an AI result also carries that result: the recognised foods, the total
 calories and the model's confidence.
 
-The request is stored in our cloud database (`support_requests`) and emailed to our support
-inbox, calcaloo@proton.me (Proton Mail). We use it only to answer you and fix the problem.
-The database copy is deleted when you delete your account; you can ask us at any time to
-delete it, and the email, sooner.
+The request — the photo included, if you attached one — is stored in our cloud database
+(`support_requests`) and sent by email to our support inbox, calcaloo@proton.me (Proton
+Mail). The email travels through an email delivery service (an SMTP relay) that acts as
+our processor; it is listed in section 5. We use the request only to answer you and fix
+the problem. The database copy, photo included, is deleted when you delete your account;
+you can ask us at any time to delete it, and the email, sooner.
 
 ### 3.7 Notifications
 
@@ -216,6 +221,7 @@ described in 3.8, which you control through the consent form and, on iOS, ATT.
 | Google (AdMob) | Advertising identifier, ad interaction data | Independent controller | United States |
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
 | Proton AG (Proton Mail) | Support requests and AI-result reports emailed to our inbox | Processor | Switzerland |
+| [SMTP relay provider — fill in when chosen] | Support requests and AI-result reports in transit to our inbox, an attached photo included | Processor | [country] |
 | Apple / Google Play | Your payment; we receive only the subscription status | Independent controllers | Per their own policies |
 
 Beyond this, we disclose data only where the law requires it.
@@ -233,12 +239,12 @@ can ask us for details at calcaloo@proton.me.
 |---|---|
 | Account and synced log | Until you delete your account (see section 9) |
 | Local data on your device | Until you delete it in the app or remove the app |
-| Food photos | Not stored — held in memory for the duration of the recognition request only |
+| Food photos sent for AI recognition | Not stored — held in memory for the duration of the recognition request only |
 | AI usage counter (`ai_quota`) | 7 days, then deleted automatically |
 | AI technical log (`ai_recognition_logs`) | Deleted automatically by a retention policy; contains no user identifier |
 | Analytics events | Per Firebase Analytics retention settings (currently up to 14 months) |
 | Crash reports | Per Crashlytics retention (currently up to 90 days) |
-| Support requests and AI-result reports | Database copy until you delete your account; the email until the matter is closed, or sooner on request |
+| Support requests and AI-result reports, an attached photo included | Database copy until you delete your account; the email until the matter is closed, or sooner on request |
 | Subscription records | Kept by RevenueCat and the stores for as long as required for billing and tax purposes |
 
 ## 8. Security
@@ -253,8 +259,8 @@ ask for more data than the app needs.
 
 ## 9. Deleting your account and your data
 
-**In the app:** Profile → Delete Account. This deletes your entries, settings, achievements
-and gamification progress from our database, deletes your account from Firebase
+**In the app:** Profile → Delete Account. This deletes your entries, settings, achievements,
+gamification progress and your support requests (photos included) from our database, deletes your account from Firebase
 Authentication, and clears the data held on the device. For security, you may be asked to
 sign in again first. The action cannot be undone.
 
