@@ -131,11 +131,9 @@ A report about an AI result also carries that result: the recognised foods, the 
 calories and the model's confidence.
 
 The request — the photo included, if you attached one — is stored in our cloud database
-(`support_requests`) and sent by email to our support inbox, calcaloo@proton.me (Proton
-Mail). The email travels through an email delivery service (an SMTP relay) that acts as
-our processor; it is listed in section 5. We use the request only to answer you and fix
-the problem. The database copy, photo included, is deleted when you delete your account;
-you can ask us at any time to delete it, and the email, sooner.
+(`support_requests`), where we read it; it is not forwarded by email. We use it only to
+answer you (by email, from calcaloo@proton.me) and fix the problem. It is deleted when you
+delete your account; you can ask us at any time to delete it sooner.
 
 If the app cannot save the request to our database, it opens your own mail app instead,
 with the message and the same technical details prefilled and no photo. That mail goes
@@ -233,8 +231,7 @@ described in 3.8, which you control through the consent form and, on iOS, ATT.
 | Google (Firebase Analytics, Crashlytics) | Analytics events, crash reports | Processor | United States |
 | Google (AdMob) | Advertising identifier, ad interaction data | Independent controller | United States |
 | RevenueCat, Inc. | Subscription status and receipts | Processor | United States |
-| Proton AG (Proton Mail) | Support requests and AI-result reports emailed to our inbox | Processor | Switzerland |
-| [SMTP relay provider — fill in when chosen] | Support requests and AI-result reports in transit to our inbox, an attached photo included | Processor | [country] |
+| Proton AG (Proton Mail) | Our email replies to you, and anything you email us | Processor | Switzerland |
 | Apple / Google Play | Your payment; we receive only the subscription status | Independent controllers | Per their own policies |
 
 Beyond this, we disclose data only where the law requires it.
@@ -258,7 +255,7 @@ can ask us for details at calcaloo@proton.me.
 | Server logs of refused or failed scans | 30 days (Google Cloud Logging) |
 | Analytics events | Per Firebase Analytics retention settings (currently up to 14 months) |
 | Crash reports | Per Crashlytics retention (currently up to 90 days) |
-| Support requests and AI-result reports, an attached photo included | Database copy until you delete your account; the email until the matter is closed, or sooner on request |
+| Support requests and AI-result reports, an attached photo included | Until you delete your account, or sooner on request |
 | Subscription records | Kept by RevenueCat and the stores for as long as required for billing and tax purposes |
 
 ## 8. Security
