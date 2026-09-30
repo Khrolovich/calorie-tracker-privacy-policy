@@ -48,9 +48,12 @@ to your account.
 
 ### 3.2 What you log in the app
 
-Your food and activity log: food entries (name, calories, portion, meal type, date and
-time), manually entered burned calories, your daily calorie goal, app settings, and
-gamification data (streaks, levels, achievements).
+Your food and activity log: each entry's calories, an optional free-text note (for
+example a food name you typed or that the AI scan recognised), whether it is food eaten
+or calories burned (including the automatic daily base-burn entry, if you turn base burn
+on), and its date and time; your daily calorie goal and base-burn settings with their
+history; and gamification data (XP and level, longest streak, achievements, challenge
+progress).
 
 This data is stored **on your device**. When you are signed in, it is also stored in your
 private area of our cloud database (Google Cloud Firestore, `users/{your user ID}`).
@@ -83,6 +86,10 @@ Alongside each scan we store two small records:
 - **Technical log** (`ai_recognition_logs`): model name, response time, success or error
   code, and a timestamp. It contains **no user ID and no image**. It is deleted
   automatically by a retention (TTL) policy.
+- **Server logs** (Google Cloud Logging): when a scan is refused or fails, the log line may
+  hold your user ID, the reason (for example no active subscription, with the entitlement
+  names and expiry date) and up to 200 characters of the model's text answer — never the
+  photo. They are kept for 30 days and are not removed when you delete your account.
 
 From version 1.2 the app asks for your consent before the first photo is sent.
 
@@ -130,12 +137,18 @@ our processor; it is listed in section 5. We use the request only to answer you 
 the problem. The database copy, photo included, is deleted when you delete your account;
 you can ask us at any time to delete it, and the email, sooner.
 
+If the app cannot save the request to our database, it opens your own mail app instead,
+with the message and the same technical details prefilled and no photo. That mail goes
+through your own email provider, and nothing is stored in our database.
+
 ### 3.7 Notifications
 
-Daily reminders are scheduled on your device. If you allow notifications, Firebase Cloud
-Messaging also issues a **device push token** so we can send app-level notices. The token
-identifies a device installation, not you by name, and carries no message content of
-yours.
+Daily reminders are scheduled on your device and need the notification permission. Each
+time the app starts it also registers with Firebase Cloud Messaging (Google), which issues
+a **device push token** whether or not you allow notifications — the permission only
+controls whether the device displays notices. The token identifies a device installation,
+not you by name; it stays with Google and the app, is not sent to our own servers, and the
+app currently sends no push messages.
 
 ### 3.8 Advertising
 
@@ -205,7 +218,7 @@ purpose:
 | Non-personalised advertising | Limited device and ad data | Legitimate interests (Art. 6(1)(f)) — funding a free app |
 | Crash and stability reports | Diagnostic data | Legitimate interests (Art. 6(1)(f)) — keeping the app working |
 | Answering a support request or a report about an AI result | The request described in 3.6 | Performance of a contract (Art. 6(1)(b)); the optional photo only because you attached it |
-| Push notifications | Device push token | Consent (Art. 6(1)(a)) — the OS notification permission |
+| Keeping push delivery possible | Device push token | Legitimate interests (Art. 6(1)(f)); showing notices and reminders needs the OS notification permission |
 
 We do not sell your personal data, and we do not "share" it for cross-context behavioural
 advertising in the sense of US state privacy laws other than through the AdMob processing
@@ -242,6 +255,7 @@ can ask us for details at calcaloo@proton.me.
 | Food photos sent for AI recognition | Not stored — held in memory for the duration of the recognition request only |
 | AI usage counter (`ai_quota`) | 7 days, then deleted automatically |
 | AI technical log (`ai_recognition_logs`) | Deleted automatically by a retention policy; contains no user identifier |
+| Server logs of refused or failed scans | 30 days (Google Cloud Logging) |
 | Analytics events | Per Firebase Analytics retention settings (currently up to 14 months) |
 | Crash reports | Per Crashlytics retention (currently up to 90 days) |
 | Support requests and AI-result reports, an attached photo included | Database copy until you delete your account; the email until the matter is closed, or sooner on request |
@@ -262,7 +276,9 @@ ask for more data than the app needs.
 **In the app:** Profile → Delete Account. This deletes your entries, settings, achievements,
 gamification progress and your support requests (photos included) from our database, deletes your account from Firebase
 Authentication, and clears the data held on the device. For security, you may be asked to
-sign in again first. The action cannot be undone.
+sign in again first. The action cannot be undone. If our deletion service cannot be
+reached, the app still removes your account and the data above, but your support requests
+stay in our database until you ask us to delete them.
 
 **By email:** write to [calcaloo@proton.me](mailto:calcaloo@proton.me?subject=Delete%20my%20Calcaloo%20account)
 from the address on the account. We complete deletions within 30 days.
