@@ -4,7 +4,7 @@ title: Privacy Policy for Calcaloo Calorie Tracker
 
 # Privacy Policy for Calcaloo Calorie Tracker
 
-**Last updated:** September 29, 2026
+**Last updated:** October 1, 2026
 
 **Applies to:** Calcaloo Calorie Tracker for iOS and Android, version 1.1 and later
 
@@ -21,9 +21,9 @@ controller** for the processing described here.
 
 ## 2. What this policy covers
 
-This policy describes what the app actually does in versions 1.1 and 1.2: what data it
+This policy describes what the app actually does in versions 1.1 to 1.3: what data it
 collects, who it is sent to, why, how long it is kept, and what you can do about it. Where
-version 1.2 differs, we say so. Where a feature is optional, we say so.
+version 1.2 or 1.3 differs, we say so. Where a feature is optional, we say so.
 
 Calcaloo is a calorie-tracking tool, not a medical device. It does not diagnose, treat, or
 prevent any condition, and its calorie figures — especially AI photo estimates — are
@@ -115,7 +115,7 @@ versions of the app so that we can fix crashes. A report contains the error and 
 trace, device model, OS and app version, and a Crashlytics installation identifier. It
 does not contain your food log or your photos.
 
-Please note: in versions 1.1 and 1.2 crash reporting is **not** governed by the analytics switch —
+Please note: in versions 1.1 to 1.3 crash reporting is **not** governed by the analytics switch —
 it is active in the released app. If you would rather it were not, write to
 calcaloo@proton.me and we will remove the reports associated with your installation.
 
@@ -188,11 +188,33 @@ The app fetches feature settings from Firebase Remote Config. This request carri
 instance and device information handled by Google as described in the Firebase
 documentation.
 
-### 3.11 Apple Health and Health Connect
+### 3.11 Apple Health and Health Connect (version 1.3 and later)
 
-Versions 1.1 and 1.2 **do not** read Apple Health or Google Health Connect. The app has no health
-entitlement and requests no health permission. Any burned-calorie figure in the app is one
-you entered yourself.
+Versions 1.1 and 1.2 do not use Apple Health or Health Connect. From version 1.3 the app can
+connect to Apple Health on iOS and to Health Connect on Android. It is off until you turn it
+on in **Profile**, and the app works the same without it. With your permission it:
+
+- **writes** one entry per day to Apple Health ("Dietary Energy") or Health Connect
+  ("Nutrition"): the total calories you logged in Calcaloo that day, so other health apps can
+  see it;
+- **reads** the active calories burned today ("Active Energy" / "Active calories burned"),
+  only to show that figure on the Today screen. It is not added to your calorie budget;
+- **reads** your most recent weight from the last 30 days ("Weight" / "Body Mass"), only to
+  pre-fill the weight field of the base-burn calculator. You confirm or change it, and only
+  the calculated result you save is kept.
+
+Data read from Apple Health or Health Connect stays on your device. It is not sent to our
+servers or to any third party, is not included in analytics, crash reports, AI requests or
+advertising, is not sold, and is not used for advertising or to build a profile of you.
+Calcaloo's use of information received from Health Connect adheres to the
+[Health Connect Permissions policy](https://support.google.com/googleplay/android-developer/answer/9888170),
+including the Limited Use requirements.
+
+You can withdraw access at any time: turn the switch off in Profile, or remove Calcaloo's
+access in the Health Connect app (App permissions → Calcaloo) or in iOS Settings → Health →
+Data Access & Devices → Calcaloo. Entries Calcaloo has already written stay in Apple Health or
+Health Connect until you delete them there; deleting your Calcaloo account does not remove
+them.
 
 ### 3.12 Children
 
@@ -249,6 +271,7 @@ can ask us for details at calcaloo@proton.me.
 |---|---|
 | Account and synced log | Until you delete your account (see section 9) |
 | Local data on your device | Until you delete it in the app or remove the app |
+| Data read from Apple Health or Health Connect | Not stored: used on the device for display or to pre-fill a field, then discarded |
 | Food photos sent for AI recognition | Not stored — held in memory for the duration of the recognition request only |
 | AI usage counter (`ai_quota`) | 7 days, then deleted automatically |
 | AI technical log (`ai_recognition_logs`) | Deleted automatically by a retention policy; contains no user identifier |
