@@ -1,16 +1,16 @@
 ---
-title: Privacy Policy for Calcaloo Calorie Tracker
+title: Privacy Policy for Calcalou Calorie Tracker
 ---
 
-# Privacy Policy for Calcaloo Calorie Tracker
+# Privacy Policy for Calcalou Calorie Tracker
 
 **Last updated:** October 1, 2026
 
-**Applies to:** Calcaloo Calorie Tracker for iOS and Android, version 1.1 and later
+**Applies to:** Calcalou Calorie Tracker for iOS and Android, version 1.1 and later
 
 ## 1. Who we are
 
-Calcaloo Calorie Tracker ("Calcaloo", "the app", "we", "us") is developed and operated by
+Calcalou Calorie Tracker ("Calcalou", "the app", "we", "us") is developed and operated by
 Vladimir Khrolovich, an independent developer.
 
 For anything about this policy or your data, write to **calcaloo@proton.me**. Privacy
@@ -25,7 +25,7 @@ This policy describes what the app actually does in versions 1.1 to 1.3: what da
 collects, who it is sent to, why, how long it is kept, and what you can do about it. Where
 version 1.2 or 1.3 differs, we say so. Where a feature is optional, we say so.
 
-Calcaloo is a calorie-tracking tool, not a medical device. It does not diagnose, treat, or
+Calcalou is a calorie-tracking tool, not a medical device. It does not diagnose, treat, or
 prevent any condition, and its calorie figures — especially AI photo estimates — are
 approximations.
 
@@ -195,7 +195,7 @@ connect to Apple Health on iOS and to Health Connect on Android. It is off until
 on in **Profile**, and the app works the same without it. With your permission it:
 
 - **writes** one entry per day to Apple Health ("Dietary Energy") or Health Connect
-  ("Nutrition"): the total calories you logged in Calcaloo that day, so other health apps can
+  ("Nutrition"): the total calories you logged in Calcalou that day, so other health apps can
   see it;
 - **reads** the active calories burned today ("Active Energy" / "Active calories burned"),
   only to show that figure on the Today screen. It is not added to your calorie budget;
@@ -206,19 +206,19 @@ on in **Profile**, and the app works the same without it. With your permission i
 Data read from Apple Health or Health Connect stays on your device. It is not sent to our
 servers or to any third party, is not included in analytics, crash reports, AI requests or
 advertising, is not sold, and is not used for advertising or to build a profile of you.
-Calcaloo's use of information received from Health Connect adheres to the
+Calcalou's use of information received from Health Connect adheres to the
 [Health Connect Permissions policy](https://support.google.com/googleplay/android-developer/answer/9888170),
 including the Limited Use requirements.
 
-You can withdraw access at any time: turn the switch off in Profile, or remove Calcaloo's
-access in the Health Connect app (App permissions → Calcaloo) or in iOS Settings → Health →
-Data Access & Devices → Calcaloo. Entries Calcaloo has already written stay in Apple Health or
-Health Connect until you delete them there; deleting your Calcaloo account does not remove
+You can withdraw access at any time: turn the switch off in Profile, or remove Calcalou's
+access in the Health Connect app (App permissions → Calcalou) or in iOS Settings → Health →
+Data Access & Devices → Calcalou. Entries Calcalou has already written stay in Apple Health or
+Health Connect until you delete them there; deleting your Calcalou account does not remove
 them.
 
 ### 3.12 Children
 
-Calcaloo is not directed at children. We do not knowingly collect personal data from
+Calcalou is not directed at children. We do not knowingly collect personal data from
 children under 13 (or under the applicable minimum age in your country). If you believe a
 child has given us data, write to calcaloo@proton.me and we will delete it.
 
@@ -300,7 +300,7 @@ sign in again first. The action cannot be undone. If our deletion service cannot
 reached, the app still removes your account and the data above, but your support requests
 stay in our database until you ask us to delete them.
 
-**By email:** write to [calcaloo@proton.me](mailto:calcaloo@proton.me?subject=Delete%20my%20Calcaloo%20account)
+**By email:** write to [calcaloo@proton.me](mailto:calcaloo@proton.me?subject=Delete%20my%20Calcalou%20account)
 from the address on the account. We complete deletions within 30 days.
 
 Deleting the app alone does not delete synced data — use Delete Account.
@@ -339,4 +339,4 @@ change with it. Material changes will also be announced in the app or by email.
 
 **Email:** [calcaloo@proton.me](mailto:calcaloo@proton.me)
 
-**Support:** [Calcaloo Support](support/)
+**Support:** [Calcalou Support](support/)

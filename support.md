@@ -1,15 +1,15 @@
 ---
-title: Calcaloo Support
+title: Calcalou Support
 permalink: /support/
 ---
 
-# Calcaloo Support
+# Calcalou Support
 
 **Last updated:** September 21, 2026
 
 ## Contact us
 
-Write to **[calcaloo@proton.me](mailto:calcaloo@proton.me?subject=Calcaloo%20support)** —
+Write to **[calcaloo@proton.me](mailto:calcaloo@proton.me?subject=Calcalou%20support)** —
 that is a real inbox, read by the developer. We reply within two business days.
 
 To get a faster answer, tell us:
@@ -24,9 +24,9 @@ To get a faster answer, tell us:
 
 Subscriptions are managed by the store, not by us.
 
-- **iPhone / iPad:** Settings → tap your name → Subscriptions → Calcaloo → Cancel.
+- **iPhone / iPad:** Settings → tap your name → Subscriptions → Calcalou → Cancel.
 - **Android:** Play Store → profile icon → Payments & subscriptions → Subscriptions →
-  Calcaloo → Cancel.
+  Calcalou → Cancel.
 
 Cancel at least 24 hours before the renewal date. A free trial turns into a paid
 subscription unless you cancel at least 24 hours before it ends.
@@ -49,7 +49,7 @@ In the app: **Profile → Delete Account**. It removes your entries, settings an
 from our database and from the device.
 
 Prefer email? Write to
-[calcaloo@proton.me](mailto:calcaloo@proton.me?subject=Delete%20my%20Calcaloo%20account)
+[calcaloo@proton.me](mailto:calcaloo@proton.me?subject=Delete%20my%20Calcalou%20account)
 from the address on the account and we will delete it within 30 days.
 
 ### How do I turn off ads?
@@ -60,8 +60,8 @@ controlled in **Settings → Privacy & Security → Tracking**.
 
 ### How accurate is the AI photo scan?
 
-It is an estimate, not a measurement. Calcaloo tells you how confident it is, and you can
-edit every number before saving. Calcaloo is not a medical device and does not give
+It is an estimate, not a measurement. Calcalou tells you how confident it is, and you can
+edit every number before saving. Calcalou is not a medical device and does not give
 medical or dietary advice — talk to a professional about anything health-related.
 
 ### Something else
